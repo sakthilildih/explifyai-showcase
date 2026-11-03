@@ -6,7 +6,7 @@
 
 🔊 **[Watch the full demo with sound](media/explifyai-demo.mp4)** · [Sample lesson](media/dns-demo.mp4)
 
-> The product's source code is private. This repo shows what it does and how it works.
+> The product's source code is private. This repo shows what it does.
 
 ## The problem
 
@@ -21,17 +21,6 @@ Indian college students study from dense notes and slides, and then cram. YouTub
 5. **Lock it in**: a quiz and flashcards made from the same lesson.
 
 Lessons can be made in **16 Indian languages**, including Tamil, Hindi and Tanglish.
-
-## Stack
-
-| Layer | Tech |
-|---|---|
-| Frontend | Next.js · TypeScript · Tailwind · shadcn/ui · Motion |
-| Backend | Python · FastAPI |
-| AI | Gemini (planning, scene code, OCR, quiz, chat) |
-| Voice | Kokoro TTS · Whisper alignment for word-level timing |
-| Video | HTML-based scene engine → headless render → ffmpeg |
-| Infra | AWS (Ubuntu) · systemd · auto-deploy on push |
 
 ## Founder
 
