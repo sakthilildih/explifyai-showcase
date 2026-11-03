@@ -2,9 +2,9 @@
 
 **Upload your class notes and get a personal video lesson made for what *you* don't understand yet, with an AI teacher you can stop and ask questions at any moment.**
 
-[![Watch the ExplifyAI demo](media/dns-demo.jpg)](media/explifyai-demo.mp4)
+[![ExplifyAI demo](media/demo.gif)](media/explifyai-demo.mp4)
 
-▶️ **[Watch the demo](media/explifyai-demo.mp4)** · [Sample lesson](media/dns-demo.mp4)
+🔊 **[Watch the full demo with sound](media/explifyai-demo.mp4)** · [Sample lesson](media/dns-demo.mp4)
 
 > The product's source code is private. This repo shows what it does and how it works.
 
@@ -21,26 +21,6 @@ Indian college students study from dense notes and slides, and then cram. YouTub
 5. **Lock it in**: a quiz and flashcards made from the same lesson.
 
 Lessons can be made in **16 Indian languages**, including Tamil, Hindi and Tanglish.
-
-## How a video is generated
-
-```
-notes ──► OCR + topic map ──► depth diagnostic ──► storyboard (1 LLM call: beats, Bloom level, visuals)
-                                                         │
-                         ┌───────────────────────────────┼───────────────────────────────┐
-                         ▼                               ▼                               ▼
-                    scene 1                          scene 2               …         scene N      (in parallel)
-          voice + word-level cue timing → LLM writes the scene → automated layout checks
-          → rule-based fixes (free) → LLM patch only if still needed → render
-                         └───────────────────────────────┬───────────────────────────────┘
-                                                         ▼
-                                                 merge (ffmpeg) ──► lesson
-```
-
-- **Cheap by design**: small, fast models do most of the work, and a larger model is used only for planning and as a last resort. The cost of every lesson is measured and logged.
-- **Resumable**: an interrupted render never pays for the same LLM call twice.
-- **Self-checking**: an in-page runtime fits text to the space, places annotations and prevents overlaps before a frame is rendered. A quality tool scores every video without anyone watching it.
-- **Scales to the machine**: the number of parallel workers is picked from the available CPU and RAM.
 
 ## Stack
 
